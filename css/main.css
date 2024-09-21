@@ -1,0 +1,246 @@
+/* ------ Global ------ */
+
+:root {
+  --Min-Colar: #E65F78;
+}
+
+.MinColar {
+  color: var(--Min-Colar);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fit-content{
+  width: fit-content;
+}
+
+
+/* ------ Navbar ------ */
+.nav-link {
+  color: black !important;
+  opacity: 0.7;
+}
+
+.nav-link:hover {
+  color: var(--Min-Colar) !important;
+  opacity: 1;
+}
+
+.active {
+  color: var(--Min-Colar) !important;
+  font-weight: bold;
+  opacity: 1;
+}
+
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+
+
+
+
+/* ------ Headar ------ */
+.geer {
+  background-color: var(--Min-Colar) !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+  top: 30%;
+  z-index: 9999999;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 70px;
+  width: 30px;
+  bottom: 80px;
+  border: white 1px solid;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.arrow::after {
+  content: "  ";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+
+}
+
+
+
+@keyframes move {
+
+  from {
+    bottom: 80px;
+  }
+
+  to {
+    bottom: 20px;
+  }
+
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/header-bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 60px !important;
+}
+
+header .btn-download {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+header .btn-download:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+
+
+
+
+
+
+/* ------ About ------ */
+
+.about-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.about-icon:hover i {
+  color: var(--Min-Colar) !important;
+  transition: 0.1s;
+
+}
+
+.about-icon:hover {
+  border: solid var(--Min-Colar) 1px;
+  transition: 0.1s;
+}
+
+
+
+
+/* ------ client ------ */
+
+#client{
+  background-color: #ccc;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--Min-Colar);
+  padding: 0.5px;
+  border-radius: 40%;
+
+}
+
+
+/* ------ Portfolio ------ */
+
+
+.layer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+  opacity: 0;
+  color: white;
+  transition: 0.3s;
+}
+
+
+.item1{
+  overflow: hidden;
+}
+
+.item1:hover .layer{
+  top: 0;
+  opacity:1 ;
+}
+
+.item1 img{
+transition: 0.3s;
+}
+.item1:hover img{
+transform: scale(1.2);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: white !important;
+  background-color: var(--Min-Colar);
+  border-radius: 50px;
+}
+
+
+
+
+/* ------ blog ------ */
+
+
+#blog{
+  background-color: #ccc;
+}
+
+
+/* ------ contacts  ------ */
+
+.bg-white {
+  background-color: var(--Min-Colar) !important;
+  color: white !important;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+
+/* ------ media query ------ */
+
+@media only screen and (max-width: 991px) {
+
+  #About .about-content h1{
+    margin-top: 20px;
+  }
+}
